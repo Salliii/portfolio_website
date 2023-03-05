@@ -3,6 +3,15 @@
 :root {
     --main-background: rgba(0, 179, 255, 100%);
 
+    /* highlight colors */
+    --highlight-one: rgba(255, 0, 107, 100%);
+    --highlight-two: rgb(255, 255, 255);
+
+    /* text color */
+    --default-text-color: rgba(0, 0, 0, 100%);
+    --text-shadow: rgba(0, 0, 0, 100%);
+    --text-stroke: rgba(0, 0, 0, 100%);
+
     /* header */
     --header-background: rgba(0, 0, 0, 100%);
     --pagelink-default-color: rgba(244, 199, 111, 100%);
