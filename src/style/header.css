@@ -37,7 +37,7 @@ header > .pagelink > .content {
     color: var(--pagelink-default-color);
     font-family: "Poppins";
     font-weight: 700;
-    font-size: 1.6em;
+    font-size: 2em;
     position: relative;
     overflow: visible;
 }

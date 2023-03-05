@@ -4,14 +4,15 @@ section.wrapper.home {
 
 .wrapper.home > .content.wrapper {
     display: grid;
+    column-gap: 200px;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
-        "line1 line1"
-        ". line2"
-        ". line3"
-        ". line4";
-    overflow: hidden;
+        "line1  line1"
+        ".      line2"
+        "career line3"
+        "career line4";
+    overflow: visible;
 }
 
 .wrapper.home > .content.wrapper > .line {
@@ -19,7 +20,7 @@ section.wrapper.home {
     flex-direction: row;
     justify-content: flex-end;
     align-items: baseline;
-    column-gap: 20px;
+    column-gap: 30px;
     overflow: visible;
 }
 .wrapper.home > .content.wrapper > .line:nth-child(1) {
@@ -34,6 +35,9 @@ section.wrapper.home {
 .wrapper.home > .content.wrapper > .line:nth-child(4) {
     grid-area: line4;
     align-items: flex-start !important;
+}
+.wrapper.home > .content.wrapper > .career {
+    grid-area: career;
 }
 
 .wrapper.home > .content.wrapper > .line > span {
@@ -57,4 +61,39 @@ section.wrapper.home {
 .wrapper.home > .content.wrapper > .line > span.basic {
     color: var(--default-text-color);
     font-size: 100px;
+}
+
+.wrapper.home > .content.wrapper > .career {
+    background-color: var(--highlight-three);
+    padding: 30px 50px 30px 50px;
+    border-radius: 50px;
+    border: solid 5px var(--text-stroke);
+    box-shadow: 8px 8px 0px var(--text-shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.wrapper.home > .content.wrapper > .career > .line {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.wrapper.home > .content.wrapper > .career > .line:nth-child(1) {
+    justify-content: flex-start;
+}
+.wrapper.home > .content.wrapper > .career > .line:nth-child(2) {
+    justify-content: center;
+}
+.wrapper.home > .content.wrapper > .career > .line:nth-child(3) {
+    justify-content: flex-end;
+}
+.wrapper.home > .content.wrapper > .career > .line > span {
+    color: var(--default-text-color);
+    font-family: "Poppins", Arial;
+    font-size: 50px;
+    font-weight: 700;
+}
+.wrapper.home > .content.wrapper > .career > .line.splitter > span {
+    filter: opacity(10%);
 }

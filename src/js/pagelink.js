@@ -11,7 +11,7 @@ const pagelink_contact = [
     document.getElementById("header-pagelink-contact-mobile")
 ];
 const page_home = document.getElementById("home-wrapper")
-const page_projects = document.getElementById("projects-wrapper")
+const page_projects = document.getElementById("projetcs-wrapper")
 const page_contact = document.getElementById("contact-wrapper")
 
 

@@ -5,7 +5,8 @@
 
     /* highlight colors */
     --highlight-one: rgba(255, 0, 107, 100%);
-    --highlight-two: rgb(255, 255, 255);
+    --highlight-two: rgba(255, 255, 255, 100%);
+    --highlight-three: rgba(244, 199, 111, 100%);
 
     /* text color */
     --default-text-color: rgba(0, 0, 0, 100%);
