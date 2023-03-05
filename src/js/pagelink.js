@@ -10,6 +10,9 @@ const pagelink_contact = [
     document.getElementById("header-pagelink-contact-desktop"),
     document.getElementById("header-pagelink-contact-mobile")
 ];
+const page_home = document.getElementById("home-wrapper")
+const page_projects = document.getElementById("projects-wrapper")
+const page_contact = document.getElementById("contact-wrapper")
 
 
 function unsetSelected(element) {
@@ -29,31 +32,18 @@ function setSelected(element) {
 }
 
 
-function loadEventListener() {
-    pagelink_home.forEach((pagelink) => {
+function loadEventListener(pagelink_list, page) {
+    pagelink_list.forEach((pagelink) => {
         pagelink.addEventListener("click", (event) => {
             unsetSelected("*")
-            pagelink_home.forEach((pagelink) => {
-                setSelected(pagelink);
-            })
-        })
-    })
-    pagelink_projects.forEach((pagelink) => {
-        pagelink.addEventListener("click", (event) => {
-            unsetSelected("*")
-            pagelink_projects.forEach((pagelink) => {
-                setSelected(pagelink);
-            })
-        })
-    })
-    pagelink_contact.forEach((pagelink) => {
-        pagelink.addEventListener("click", (event) => {
-            unsetSelected("*")
-            pagelink_contact.forEach((pagelink) => {
+            pagelink_list.forEach((pagelink) => {
+                page.scrollIntoView({behavior: "smooth"})
                 setSelected(pagelink);
             })
         })
     })
 }
 
-loadEventListener();
+loadEventListener(pagelink_home, page_home);
+loadEventListener(pagelink_projects, page_projects);
+loadEventListener(pagelink_contact, page_contact);
