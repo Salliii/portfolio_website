@@ -17,6 +17,8 @@ header.mobilemenu.wrapper {
     padding: 40px 0px 40px 0px ;
     flex-direction: column-reverse;
     top: 80px;
+    position: fixed;
+    overflow: visible;
 }
 
 header > .pagelink {

@@ -1,3 +1,6 @@
+const hamburger = document.getElementById("header-hamburger");
+const mobilemenu = document.getElementById("mobilemenu-wrapper");
+
 const pagelink_home = [
     document.getElementById("header-pagelink-home-desktop"),
     document.getElementById("header-pagelink-home-mobile")
@@ -40,6 +43,8 @@ function loadEventListener(pagelink_list, page) {
                 page.scrollIntoView({behavior: "smooth"})
                 setSelected(pagelink);
             })
+            mobilemenu.setAttribute("state", "closed");
+            hamburger.setAttribute("state", "hamburger");
         })
     })
 }

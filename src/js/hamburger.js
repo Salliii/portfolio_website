@@ -2,7 +2,7 @@ const hamburger = document.getElementById("header-hamburger");
 const mobilemenu = document.getElementById("mobilemenu-wrapper");
 
 
-function toggleMobilemenuState() {
+export function toggleMobilemenuState() {
     if (mobilemenu.getAttribute("state") == "opened") {
         mobilemenu.setAttribute("state", "closed");
         hamburger.setAttribute("state", "hamburger")
