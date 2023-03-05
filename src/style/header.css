@@ -54,7 +54,7 @@ header > .pagelink > .content::after, header > .pagelink > .content::after {
     bottom: 0px;
     right: 0px;
 }
-header > .pagelink:not(:hover) > .content::after {
+header > .pagelink[selected="false"]:not(:hover) > .content::after {
     animation: 0.4s not_onhover forwards;
 }
 header > .pagelink[selected="true"] > .content::before, header > .pagelink:hover > .content::before {
