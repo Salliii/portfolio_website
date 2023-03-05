@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./src/style/header.css">
 
     <script src="./src/js/pagelink.js" type="module"></script>
+    <script src="./src/js/hamburger.js" type="module"></script>
 </head>
 <body>
     <header class="wrapper" id="header-wrapper">
@@ -24,6 +25,28 @@
         </div>
         <div class="pagelink home" id="header-pagelink-home-desktop" selected="false">
             <div class="content" id="header-pagelink-content-home-desktop">
+                Home
+            </div>
+        </div>
+        <div class="hamburger" id="header-hamburger" state="hamburger">
+            <div class="layer"></div>
+            <div class="layer"></div>
+            <div class="layer"></div>
+        </div>
+    </header>
+    <header class="mobilemenu wrapper" id="mobilemenu-wrapper" state="closed">
+        <div class="pagelink contact" id="header-pagelink-contact-mobile" selected="false">
+            <div class="content" id="header-pagelink-content-contact-mobile">
+                Contact
+            </div>
+        </div>
+        <div class="pagelink projects" id="header-pagelink-projects-mobile" selected="false">
+            <div class="content" id="header-pagelink-content-projects-mobile">
+                Projects
+            </div>
+        </div>
+        <div class="pagelink home" id="header-pagelink-home-mobile" selected="false">
+            <div class="content" id="header-pagelink-content-home-mobile">
                 Home
             </div>
         </div>

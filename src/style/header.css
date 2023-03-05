@@ -7,6 +7,20 @@ header.wrapper {
     flex-direction: row-reverse;
     align-items: center;
     gap: 30px;
+    position: absolute;
+    top: 0px;
+}
+header.mobilemenu.wrapper {
+    height: fit-content;
+    padding: 40px 0px 40px 0px ;
+    flex-direction: column-reverse;
+    top: 80px;
+}
+header.mobilemenu.wrapper[state="opened"] {
+    display: flex;
+}
+header.mobilemenu.wrapper[state="closed"] {
+    display: none;
 }
 
 header > .pagelink {
@@ -17,6 +31,9 @@ header > .pagelink {
     justify-content: center;
     align-items: center;
     overflow: visible;
+}
+header > .pagelink * {
+    cursor: pointer;
 }
 
 header > .pagelink > .content {
@@ -29,14 +46,12 @@ header > .pagelink > .content {
     overflow: visible;
 }
 
-
 header > .pagelink[selected="true"] > .content, header > .pagelink:hover > .content {
     transition: 0.4s;
     color: var(--pagelink-selected-color);
 }
 
-
-header > .pagelink > .content::before, header > .pagelink > .content::before {
+header > .pagelink > .content::before {
     content: "";
     background-color: var(--pagelink-selected-color);
     width: 0px;
@@ -45,7 +60,7 @@ header > .pagelink > .content::before, header > .pagelink > .content::before {
     bottom: 0px;
     left: 0px;
 }
-header > .pagelink > .content::after, header > .pagelink > .content::after {
+header > .pagelink > .content::after {
     content: "";
     background-color: var(--pagelink-selected-color);
     width: 0px;
@@ -75,5 +90,129 @@ header > .pagelink[selected="true"] > .content::before, header > .pagelink:hover
     }
     100% {
         width: 0px;
+    }
+}
+
+header > .hamburger {
+    transition: 0.4s;
+    height: 30px;
+    width: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    overflow: visible;
+}
+header > .hamburger * {
+    cursor: pointer;
+}
+header > .hamburger > .layer {
+    transition: 0.4s;
+    background-color: var(--pagelink-selected-color);
+    height: 6px;
+    width: 100%;
+    border-radius: 5px;
+    transform-origin: center;
+}
+header > .hamburger > .layer:nth-child(2) {
+    width: 80%;
+}
+header > .hamburger[state="cross"] > .layer:nth-child(1) {
+    animation: 0.4s layer_one_to_cross forwards;
+}
+header > .hamburger[state="cross"] > .layer:nth-child(2) {
+    animation: 0.4s layer_two_to_cross forwards;
+}
+header > .hamburger[state="cross"] > .layer:nth-child(3) {
+    animation: 0.4s layer_three_to_cross forwards;
+}
+header > .hamburger[state="hamburger"] > .layer:nth-child(1) {
+    animation: 0.4s layer_one_to_hamburger forwards;
+}
+header > .hamburger[state="hamburger"] > .layer:nth-child(2) {
+    animation: 0.4s layer_two_to_hamburger forwards;
+}
+header > .hamburger[state="hamburger"] > .layer:nth-child(3) {
+    animation: 0.4s layer_three_to_hamburger forwards;
+}
+
+@keyframes layer_one_to_cross {
+    0%  {
+        transform: translateY(0px) rotate(0deg);
+    }
+    100%{
+        transform: translateY(12px) rotate(45deg);
+    }
+}
+@keyframes layer_two_to_cross {
+    0%  {
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(1000px);
+    }
+}
+@keyframes layer_three_to_cross {
+    0%  {
+        transform: translateY(0px) rotate(0deg) ;
+    }
+    100%{
+        transform: translateY(-12px) rotate(-45deg);
+    }
+}
+@keyframes layer_one_to_hamburger {
+    0%  {
+        transform: translateY(12px) rotate(45deg);
+    }
+    100%{
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+@keyframes layer_two_to_hamburger {
+    0%  {
+        transform: translateX(1000px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+@keyframes layer_three_to_hamburger {
+    0%  {
+        transform: translateY(-12px) rotate(-45deg);
+    }
+    100%{
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+
+@media screen and (max-width: 521px) {
+    header > .hamburger {
+        display: flex;
+    }
+    header:not(.mobilemenu) > .pagelink {
+        display: none;
+    }
+    header.wrapper {
+        height: 80px;
+        padding: 0px 25px 0px 25px;
+    }
+    header.mobilemenu.wrapper {
+        display: flex;
+    }
+}
+@media screen and (min-width: 521px) {
+    header > .hamburger {
+        display: none;
+    }
+    header:not(.mobilemenu) > .pagelink {
+        display: flex;
+    }
+    header.wrapper {
+        height: 120px;
+        padding: 0px 40px 0px 40px;
+    }
+    header.mobilemenu.wrapper {
+        display: none !important;
     }
 }

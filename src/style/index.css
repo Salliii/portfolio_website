@@ -6,7 +6,7 @@
     /* header */
     --header-background: rgba(0, 0, 0, 100%);
     --pagelink-default-color: rgba(244, 199, 111, 100%);
-    --pagelink-selected-color: rgba(255, 255, 255, 100%);
+    --pagelink-selected-color: rgb(255, 170, 0, 100%);
 }
 
 
