@@ -24,14 +24,14 @@ function loadEventListener() {
     let last_scroll_position = 0
     let last_scroll_direction = "up"
 
-    window.addEventListener("scrollend", (event) => {
-        if (window.scrollY > last_scroll_position && last_scroll_direction == "up") {
+    window.addEventListener("wheel", (event) => {
+        if (event.deltaY > 0 && last_scroll_direction == "up") {
             /* scroll down */
             header.animate(animation_up, animation_up_timing);
             mobilemenu.animate(animation_up, animation_up_timing);
             last_scroll_direction = "down";
         }
-        else if ((window.scrollY < last_scroll_position || last_scroll_position == 0) && last_scroll_direction == "down") {
+        else if (event.deltaY < 0 && last_scroll_direction == "down") {
             /* scroll up */
             header.animate(animation_down, animation_down_timing);
             mobilemenu.animate(animation_down, animation_down_timing);
