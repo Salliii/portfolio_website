@@ -2,6 +2,8 @@
 
 :root {
     --main-background: rgba(0, 179, 255, 100%);
+    --element-shadow: rgba(0, 0, 0, 100%);
+    --element-stroke: rgba(0, 0, 0, 100%);
 
     /* highlight colors */
     --highlight-one: rgba(255, 0, 107, 100%);
@@ -10,8 +12,6 @@
 
     /* text color */
     --default-text-color: rgba(0, 0, 0, 100%);
-    --text-shadow: rgba(0, 0, 0, 100%);
-    --text-stroke: rgba(0, 0, 0, 100%);
 
     /* header */
     --header-background: rgba(0, 0, 0, 100%);

@@ -1,3 +1,44 @@
 section.wrapper.contact {
-    height: 500px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.wrapper.contact > .content.grid {
+    display: grid;
+    row-gap: 25px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    overflow: visible;
+    grid-template-areas: 
+    "cl-github"
+    "cl-linkedin"
+    "cl-twitter"
+    "cl-discord";
+}
+
+
+.wrapper.contact > .content.grid > .contactlink {
+    background-color: var(--highlight-three);
+    height: 120px;
+    width: 120px;
+    padding: 30px;
+    border-radius: 25px;
+    border: solid 5px var(--element-stroke);
+    box-shadow: 8px 8px 0px var(--element-shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper.contact > .content.grid > .contactlink.github {
+    grid-area: cl-github;
+}
+.wrapper.contact > .content.grid > .contactlink.linkedin {
+    grid-area: cl-linkedin;
+}
+.wrapper.contact > .content.grid > .contactlink.twitter {
+    grid-area: cl-twitter;
+}
+.wrapper.contact > .content.grid > .contactlink.discord {
+    grid-area: cl-discord;
 }
