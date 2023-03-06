@@ -2,7 +2,6 @@ section.wrapper.home {
     height: 100vh;
     padding-top: 180px;
 }
-
 .wrapper.home > .content.grid {
     display: grid;
     column-gap: 200px;
@@ -15,6 +14,7 @@ section.wrapper.home {
         "career line4";
     overflow: visible;
 }
+
 
 .wrapper.home > .content.grid .line {
     display: flex;
@@ -36,9 +36,6 @@ section.wrapper.home {
 .wrapper.home > .content.grid > .line:nth-child(4) {
     grid-area: line4;
     align-items: flex-start !important;
-}
-.wrapper.home > .content.grid > .career {
-    grid-area: career;
 }
 
 .wrapper.home > .content.grid .line span {
@@ -64,7 +61,9 @@ section.wrapper.home {
     font-size: 100px;
 }
 
+
 .wrapper.home > .content.grid > .career {
+    grid-area: career;
     background-color: var(--highlight-three);
     padding: 0px 50px 0px 50px;
     border-radius: 50px;
@@ -111,6 +110,8 @@ section.wrapper.home {
     word-break: break-all;
     overflow: hidden;
 }
+
+
 
 
 /* media query */

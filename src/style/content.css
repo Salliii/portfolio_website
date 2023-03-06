@@ -12,6 +12,8 @@ section.wrapper > .content.wrapper {
 }
 
 
+
+
 /* media query */
 @media screen and (max-width: 1311px) {
     section.wrapper {

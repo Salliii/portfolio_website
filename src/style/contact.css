@@ -1,19 +1,22 @@
 section.wrapper.contact {
     height: 100vh;
+    padding: 0px 250px 0px 250px;
     display: flex;
     justify-content: center;
 }
 .wrapper.contact > .content.grid {
+    width: 100%;
     display: grid;
     row-gap: 25px;
-    grid-template-columns: 1fr;
+    column-gap: 75px;
+    grid-template-columns: auto 1fr;
     grid-template-rows: auto;
     overflow: visible;
     grid-template-areas: 
-    "cl-github"
-    "cl-linkedin"
-    "cl-twitter"
-    "cl-discord";
+    "cl-github   d-message"
+    "cl-linkedin d-message"
+    "cl-twitter  d-message"
+    "cl-discord  d-message";
 }
 
 
@@ -41,4 +44,77 @@ section.wrapper.contact {
 }
 .wrapper.contact > .content.grid > .contactlink.discord {
     grid-area: cl-discord;
+}
+
+
+.wrapper.contact > .content.grid > .directmessage.wrapper {
+    grid-area: d-message;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    overflow: visible;
+}
+
+.wrapper.contact > .content.grid > .directmessage.wrapper > .wrapper {
+    background-color: var(--highlight-two);
+    width: 100%;
+    padding: 22px 30px 22px 30px;
+    box-shadow: 8px 8px 0px var(--element-shadow);
+    border: solid 5px var(--element-stroke) !important;
+    border-radius: 25px;
+}
+
+.wrapper.contact > .content.grid > .directmessage.wrapper input,
+.wrapper.contact > .content.grid > .directmessage.wrapper textarea,
+.wrapper.contact > .content.grid > .directmessage.wrapper input:focus,
+.wrapper.contact > .content.grid > .directmessage.wrapper textarea:focus,
+.wrapper.contact > .content.grid > .directmessage.wrapper input::placeholder,
+.wrapper.contact > .content.grid > .directmessage.wrapper textarea::placeholder {
+    color: var(--default-text-color);
+    font-family: "Poppins", Arial;
+    font-size: 25px;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    cursor: text;
+    resize: none;
+}
+.wrapper.contact > .content.grid > .directmessage.wrapper input::placeholder,
+.wrapper.contact > .content.grid > .directmessage.wrapper textarea::placeholder {
+    color: rgba(0, 0, 0, 50%);
+}
+
+.wrapper.contact > .content.grid > .directmessage.wrapper > .wrapper.messagebox {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 25px;
+}
+.wrapper.contact > .content.grid > .directmessage.wrapper > .wrapper.messagebox textarea {
+    width: 100%;
+    height: 100%;
+    line-height: 120%;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: black var(--highlight-two);
+}
+.wrapper.contact > .content.grid > .directmessage.wrapper > .wrapper.messagebox > .wrapper.send {
+    background-color: var(--highlight-one);
+    color: var(--default-text-color);
+    width: fit-content;
+    height: fit-content !important;
+    padding: 15px 35px 15px 35px;
+    box-shadow: 6px 6px 0px var(--element-shadow);
+    border: solid 5px var(--element-stroke);
+    border-radius: 25px;
+    font-family: "Poppins", Arial;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 200%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
