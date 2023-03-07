@@ -36,7 +36,7 @@ header > .pagelink * {
 
 header > .pagelink > .content {
     transition: 0.4s;
-    color: var(--pagelink-default-color);
+    color: var(--highlight-three);
     font-family: "Poppins";
     font-weight: 700;
     font-size: 2em;
@@ -46,7 +46,7 @@ header > .pagelink > .content {
 
 header > .pagelink > .content::before {
     content: "";
-    background-color: var(--pagelink-selected-color);
+    background-color: var(--highlight-three-selected);
     width: 0px;
     height: 2px;
     position: absolute;
@@ -55,7 +55,7 @@ header > .pagelink > .content::before {
 }
 header > .pagelink > .content::after {
     content: "";
-    background-color: var(--pagelink-selected-color);
+    background-color: var(--highlight-three-selected);
     width: 0px;
     height: 2px;
     position: absolute;
@@ -78,7 +78,7 @@ header > .hamburger, header > .hamburger * {
 }
 header > .hamburger > .layer {
     transition: 0.4s;
-    background-color: var(--pagelink-selected-color);
+    background-color: var(--highlight-three-selected);
     height: 6px;
     width: 100%;
     border-radius: 5px;
@@ -92,7 +92,7 @@ header > .hamburger > .layer:nth-child(2) {
 /* pagelink hover or selection */
 header > .pagelink[selected="true"] > .content, header > .pagelink:hover > .content {
     transition: 0.4s;
-    color: var(--pagelink-selected-color);
+    color: var(--highlight-three-selected);
 }
 header > .pagelink[selected="false"]:not(:hover) > .content::after {
     animation: 0.4s not_onhover forwards;

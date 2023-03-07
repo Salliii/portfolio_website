@@ -13,10 +13,10 @@ section.wrapper.contact {
     grid-template-rows: auto;
     overflow: visible;
     grid-template-areas: 
-    "cl-github   d-message"
-    "cl-linkedin d-message"
-    "cl-twitter  d-message"
-    "cl-discord  d-message";
+    "cl-github   dmessage"
+    "cl-linkedin dmessage"
+    "cl-twitter  dmessage"
+    "cl-discord  dmessage";
 }
 
 
@@ -31,6 +31,9 @@ section.wrapper.contact {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.wrapper.contact > .content.grid > .contactlink:hover {
+    background-color: var(--highlight-three-selected);
 }
 
 .wrapper.contact > .content.grid > .contactlink.github {
@@ -47,8 +50,8 @@ section.wrapper.contact {
 }
 
 
-.wrapper.contact > .content.grid > .directmessage.wrapper {
-    grid-area: d-message;
+.wrapper.contact > .content.grid > .wrapper.directmessage {
+    grid-area: dmessage;
     width: 100%;
     height: 100%;
     display: flex;
@@ -57,64 +60,57 @@ section.wrapper.contact {
     overflow: visible;
 }
 
-.wrapper.contact > .content.grid > .directmessage.wrapper > .wrapper {
+.wrapper.contact > .content.grid > .wrapper.directmessage > .wrapper {
     background-color: var(--highlight-two);
     width: 100%;
-    padding: 22px 30px 22px 30px;
+    padding: 15px 25px 15px 25px;
     box-shadow: 8px 8px 0px var(--element-shadow);
-    border: solid 5px var(--element-stroke) !important;
+    border: solid 5px var(--element-stroke);
     border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 10px;
+}
+.wrapper.contact > .content.grid > .wrapper.directmessage > .wrapper.message {
+    flex-grow: 1;
 }
 
-.wrapper.contact > .content.grid > .directmessage.wrapper input,
-.wrapper.contact > .content.grid > .directmessage.wrapper textarea,
-.wrapper.contact > .content.grid > .directmessage.wrapper input:focus,
-.wrapper.contact > .content.grid > .directmessage.wrapper textarea:focus,
-.wrapper.contact > .content.grid > .directmessage.wrapper input::placeholder,
-.wrapper.contact > .content.grid > .directmessage.wrapper textarea::placeholder {
+.wrapper.contact > .content.grid > .wrapper.directmessage > .wrapper > .input {
+    width: 100%;
     color: var(--default-text-color);
     font-family: "Poppins", Arial;
     font-size: 25px;
     font-weight: 700;
+    line-height: 120%;
     border: none;
-    outline: none;
     cursor: text;
     resize: none;
+    flex-grow: 1;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-color) var(--highlight-two);
 }
-.wrapper.contact > .content.grid > .directmessage.wrapper input::placeholder,
-.wrapper.contact > .content.grid > .directmessage.wrapper textarea::placeholder {
-    color: rgba(0, 0, 0, 50%);
+.wrapper.contact > .content.grid > .wrapper.directmessage > .wrapper > .input:focus {
+    outline: none;
+}
+.wrapper.contact > .content.grid > .wrapper.directmessage > .wrapper > .input::placeholder {
+    color: var(--placeholder-color);
 }
 
-.wrapper.contact > .content.grid > .directmessage.wrapper > .wrapper.messagebox {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    gap: 25px;
-}
-.wrapper.contact > .content.grid > .directmessage.wrapper > .wrapper.messagebox textarea {
-    width: 100%;
-    height: 100%;
-    line-height: 120%;
-    overflow-y: scroll;
-    scrollbar-width: thin;
-    scrollbar-color: black var(--highlight-two);
-}
-.wrapper.contact > .content.grid > .directmessage.wrapper > .wrapper.messagebox > .wrapper.send {
+.wrapper.contact > .content.grid > .wrapper.directmessage .send {
     background-color: var(--highlight-one);
-    color: var(--default-text-color);
-    width: fit-content;
-    height: fit-content !important;
     padding: 15px 35px 15px 35px;
-    box-shadow: 6px 6px 0px var(--element-shadow);
+    box-shadow: 8px 8px 0px var(--element-shadow);
     border: solid 5px var(--element-stroke);
     border-radius: 25px;
+    color: var(--default-text-color);
     font-family: "Poppins", Arial;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 700;
-    line-height: 200%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    line-height: 120%;
+    cursor: pointer;
+    user-select: none;
+}
+.wrapper.contact > .content.grid > .wrapper.directmessage .send:hover {
+    background-color: var(--highlight-one-selected);
 }

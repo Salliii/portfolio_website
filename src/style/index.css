@@ -4,19 +4,22 @@
     --main-background: rgba(0, 179, 255, 100%);
     --element-shadow: rgba(0, 0, 0, 100%);
     --element-stroke: rgba(0, 0, 0, 100%);
+    --scrollbar-color: rgba(0, 0, 0, 8%);
 
     /* highlight colors */
-    --highlight-one: rgba(255, 0, 107, 100%);
+    --highlight-one: rgb(255, 0, 106);
+    --highlight-one-selected: rgb(226, 0, 94);
     --highlight-two: rgba(255, 255, 255, 100%);
     --highlight-three: rgba(244, 199, 111, 100%);
+    --highlight-three-selected: rgb(255, 181, 33);
 
     /* text color */
     --default-text-color: rgba(0, 0, 0, 100%);
+    --placeholder-color: rgba(0, 0, 0, 50%);
+    --splitter-color: rgba(0, 0, 0, 10%);
 
     /* header */
     --header-background: rgba(0, 0, 0, 100%);
-    --pagelink-default-color: rgba(244, 199, 111, 100%);
-    --pagelink-selected-color: rgb(255, 170, 0, 100%);
 }
 
 

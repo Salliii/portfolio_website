@@ -106,7 +106,7 @@ section.wrapper.home {
 
 .wrapper.home > .content.grid > .career > .line.splitter > span {
     height: 50px;
-    filter: opacity(10%);
+    color: var(--splitter-color);
     word-break: break-all;
     overflow: hidden;
 }
