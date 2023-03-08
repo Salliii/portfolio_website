@@ -1,10 +1,7 @@
-section.wrapper.home {
-    height: 100vh;
-    padding-top: 180px;
-}
+/* basic layout */
 .wrapper.home > .content.grid {
     display: grid;
-    column-gap: 200px;
+    column-gap: 100px;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
@@ -16,6 +13,7 @@ section.wrapper.home {
 }
 
 
+/* line layout */
 .wrapper.home > .content.grid .line {
     display: flex;
     flex-direction: row;
@@ -38,6 +36,7 @@ section.wrapper.home {
     align-items: flex-start !important;
 }
 
+/* line content */
 .wrapper.home > .content.grid .line span {
     font-family: "Poppins";
     font-weight: 700;
@@ -47,14 +46,14 @@ section.wrapper.home {
 .wrapper.home > .content.grid .line span.highlight_one {
     color: var(--highlight-one);
     font-size: 180px;
-    text-shadow: 8px 8px 0px var(--element-stroke);
-    -webkit-text-stroke: 5px var(--element-shadow); 
+    text-shadow: var(--shadow-thickness) var(--shadow-thickness) 0px var(--shadow-color);
+    -webkit-text-stroke: var(--stroke-thickness) var(--stroke-color); 
 }
 .wrapper.home > .content.grid .line span.highlight_two {
     color: var(--highlight-two);
     font-size: 180px;
-    text-shadow: 8px 8px 0px var(--element-stroke);
-    -webkit-text-stroke: 5px var(--element-shadow); 
+    text-shadow: var(--shadow-thickness) var(--shadow-thickness) 0px var(--shadow-color);
+    -webkit-text-stroke: var(--stroke-thickness) var(--stroke-color); 
 }
 .wrapper.home > .content.grid .line span.basic {
     color: var(--default-text-color);
@@ -62,28 +61,24 @@ section.wrapper.home {
 }
 
 
+/* carreer layout */
 .wrapper.home > .content.grid > .career {
     grid-area: career;
     background-color: var(--highlight-three);
     padding: 0px 50px 0px 50px;
     border-radius: 50px;
-    border: solid 5px var(--element-stroke);
-    box-shadow: 8px 8px 0px var(--element-shadow);
+    border: solid var(--stroke-thickness) var(--stroke-color);
+    box-shadow: var(--shadow-thickness) var(--shadow-thickness) 0px var(--shadow-color);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 }
 
+/* carreer content */
 .wrapper.home > .content.grid > .career > .line {
     width: 100%;
     display: flex;
     flex-direction: row;
-}
-.wrapper.home > .content.grid > .career > .line > span {
-    color: var(--default-text-color);
-    font-family: "Poppins", Arial;
-    font-size: 50px;
-    font-weight: 700;
 }
 .wrapper.home > .content.grid > .career > .line:nth-child(1) {
     justify-content: flex-start;
@@ -103,187 +98,15 @@ section.wrapper.home {
 .wrapper.home > .content.grid > .career > .line:nth-child(3) > span {
     text-align: right;
 }
-
+.wrapper.home > .content.grid > .career > .line > span {
+    color: var(--default-text-color);
+    font-family: "Poppins", Arial;
+    font-size: 50px;
+    font-weight: 700;
+}
 .wrapper.home > .content.grid > .career > .line.splitter > span {
     height: 50px;
     color: var(--splitter-color);
     word-break: break-all;
     overflow: hidden;
-}
-
-
-
-
-/* media query */
-@media screen and (max-width: 1679px) {
-    .wrapper.home > .content.grid > .career > .line > span {
-        font-size: 40px;
-    }
-    .wrapper.home > .content.grid > .career > .line.splitter > span {
-        height: 40px;
-    }
-}
-@media screen and (max-width: 1583px) {
-    .wrapper.home > .content.grid {
-        column-gap: 100px;
-    }
-    .wrapper.home > .content.grid .line {
-        column-gap: 25px;
-    }
-    .wrapper.home > .content.grid .line span.highlight_one {
-        font-size: 140px;
-        text-shadow: 7px 7px 0px var(--element-stroke);
-        -webkit-text-stroke: 4px var(--element-shadow); 
-    }
-    .wrapper.home > .content.grid .line span.highlight_two {
-        font-size: 140px;
-        text-shadow: 7px 7px 0px var(--element-stroke);
-        -webkit-text-stroke: 4px var(--element-shadow);
-    }
-    .wrapper.home > .content.grid .line span.basic {
-        font-size: 80px;
-    }
-    .wrapper.home > .content.grid > .career {
-        border: solid 4px var(--element-stroke);
-        box-shadow: 7px 7px 0px var(--element-shadow);
-    }
-    .wrapper.home > .content.grid > .career > .line > span {
-        font-size: 30px;
-    }
-    .wrapper.home > .content.grid > .career > .line.splitter > span {
-        height: 30px;
-    }
-}
-@media screen and (max-width: 1311px) {
-    .wrapper.home > .content.grid {
-        column-gap: 60px;
-    }
-    .wrapper.home > .content.grid .line {
-        column-gap: 20px;
-    }
-    .wrapper.home > .content.grid .line span.highlight_one {
-        font-size: 100px;
-        text-shadow: 6px 6px 0px var(--element-stroke);
-        -webkit-text-stroke: 3px var(--element-shadow); 
-    }
-    .wrapper.home > .content.grid .line span.highlight_two {
-        font-size: 100px;
-        text-shadow: 6px 6px 0px var(--element-stroke);
-        -webkit-text-stroke: 3px var(--element-shadow);
-    }
-    .wrapper.home > .content.grid .line span.basic {
-        font-size: 55px;
-    }
-    .wrapper.home > .content.grid > .career {
-        border: solid 3px var(--element-stroke);
-        box-shadow: 6px 6px 0px var(--element-shadow);
-    }
-    .wrapper.home > .content.grid > .career > .line > span {
-        font-size: 26px;
-    }
-    .wrapper.home > .content.grid > .career > .line.splitter > span {
-        height: 26px;
-    }
-}
-@media screen and (max-width: 941px) {
-    .wrapper.home > .content.grid {
-        display: grid;
-        column-gap: 60px;
-        row-gap: 10px;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        grid-template-areas: 
-            "line1"
-            "line2"
-            "line3"
-            "line4"
-            "career";
-        overflow: visible;
-    }
-    .wrapper.home > .content.grid > .line {
-        width: fit-content;
-        justify-self: center;
-    }
-    .wrapper.home > .content.grid > .line:nth-child(1) {
-        flex-direction: column;
-        align-items: center;
-    }
-    .wrapper.home > .content.grid > .career {
-        margin-top: 20px;
-        padding: 20px 50px 20px 50px;
-        row-gap: 20px;
-        border-radius: 25px;
-        border: solid 2px var(--element-stroke);
-        box-shadow: 4px 4px 0px var(--element-shadow);
-    }
-    .wrapper.home > .content.grid > .career > .line > span {
-        font-size: 26px;
-    }
-    .wrapper.home > .content.grid > .career > .line.splitter > span {
-        height: 26px;
-    }
-}
-@media screen and (max-width: 603px) {
-    .wrapper.home > .content.grid > .career {
-        padding: 20px 40px 20px 40px;
-        row-gap: 15px;
-    }
-}
-@media screen and (max-width: 564px) {
-    section.wrapper.home {
-        padding-top: 140px;
-    }
-}
-@media screen and (max-width: 485px) {
-    .wrapper.home > .content.grid .line {
-        column-gap: 12px;
-    }
-    .wrapper.home > .content.grid .line span.highlight_one {
-        font-size: 80px;
-        text-shadow: 5px 5px 0px var(--element-stroke);
-        -webkit-text-stroke: 2px var(--element-shadow); 
-    }
-    .wrapper.home > .content.grid .line span.highlight_two {
-        font-size: 80px;
-        text-shadow: 5px 5px 0px var(--element-stroke);
-        -webkit-text-stroke: 2px var(--element-shadow);
-    }
-    .wrapper.home > .content.grid .line span.basic {
-        font-size: 45px;
-    }
-    .wrapper.home > .content.grid > .career {
-        border: solid 2px var(--element-stroke);
-        box-shadow: 5px 5px 0px var(--element-shadow);
-    }
-    .wrapper.home > .content.grid > .career > .line > span {
-        font-size: 24px;
-    }
-    .wrapper.home > .content.grid > .career > .line.splitter > span {
-        height: 24px;
-    }
-}
-@media screen and (max-width: 409px) {
-    .wrapper.home > .content.grid .line span.highlight_one {
-        font-size: 60px;
-        text-shadow: 4px 4px 0px var(--element-stroke);
-        -webkit-text-stroke: 2px var(--element-shadow); 
-    }
-    .wrapper.home > .content.grid .line span.highlight_two {
-        font-size: 60px;
-        text-shadow: 4px 4px 0px var(--element-stroke);
-        -webkit-text-stroke: 2px var(--element-shadow);
-    }
-    .wrapper.home > .content.grid .line span.basic {
-        font-size: 35px;
-    }
-    .wrapper.home > .content.grid > .career {
-        border: solid 2px var(--element-stroke);
-        box-shadow: 4px 4px 0px var(--element-shadow);
-    }
-    .wrapper.home > .content.grid > .career > .line > span {
-        font-size: 18px;
-    }
-    .wrapper.home > .content.grid > .career > .line.splitter > span {
-        height: 18px;
-    }
 }

@@ -2,9 +2,13 @@
 
 :root {
     --main-background: rgba(0, 179, 255, 100%);
-    --element-shadow: rgba(0, 0, 0, 100%);
-    --element-stroke: rgba(0, 0, 0, 100%);
     --scrollbar-color: rgba(0, 0, 0, 8%);
+
+    /* shadow & stroke */
+    --shadow-color: rgba(0, 0, 0, 100%);
+    --shadow-thickness: 8px;
+    --stroke-color: rgba(0, 0, 0, 100%);
+    --stroke-thickness: 5px;
 
     /* highlight colors */
     --highlight-one: rgb(255, 0, 106);
@@ -48,6 +52,7 @@ html, body {
     max-width: 100vw;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 

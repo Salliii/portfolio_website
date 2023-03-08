@@ -1,8 +1,9 @@
+/* basic layout */
 section.wrapper {
-    margin: 0px 150px 0px 150px;
+    width: 1300px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     overflow-x: visible;
 }
@@ -12,16 +13,10 @@ section.wrapper > .content.wrapper {
 }
 
 
-
-
-/* media query */
-@media screen and (max-width: 1311px) {
-    section.wrapper {
-        margin: 0px 100px 0px 100px;
-    }
+/* page wrapper layout */
+section.wrapper.home {
+    height: 100vh;
 }
-@media screen and (max-width: 603px) {
-    section.wrapper {
-        margin: 0px 50px 0px 50px;
-    }
+section.wrapper.contact {
+    height: 100vh;
 }
