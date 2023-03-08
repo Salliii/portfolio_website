@@ -221,10 +221,6 @@ header.mobilemenu.wrapper[state="closed"] {
     header:not(.mobilemenu) > .pagelink {
         display: flex;
     }
-    header.wrapper {
-        height: 120px;
-        padding: 0px 40px 0px 40px;
-    }
     header.mobilemenu.wrapper {
         display: none !important;
     }
