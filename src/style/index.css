@@ -59,3 +59,24 @@ html, body {
 a, a * {
     cursor: pointer;
 }
+
+
+
+@media only screen and (max-width: 1500px) {
+    :root {
+        --shadow-thickness: 7px;
+        --stroke-thickness: 4px;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    :root {
+        --shadow-thickness: 6px;
+        --stroke-thickness: 3px;
+    }
+}
+@media only screen and (max-width: 500px) {
+    :root {
+        --shadow-thickness: 5px;
+        --stroke-thickness: 2px;
+    }
+}
