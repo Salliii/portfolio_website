@@ -1,7 +1,6 @@
 /* basic layout */
 .wrapper.home > .content.grid {
-    display: grid;
-    column-gap: 100px;
+    column-gap: var(--text-size-two);
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
@@ -9,7 +8,6 @@
         ".      line2"
         "career line3"
         "career line4";
-    overflow: visible;
 }
 
 
@@ -19,7 +17,7 @@
     flex-direction: row;
     justify-content: flex-end;
     align-items: baseline;
-    column-gap: 30px;
+    column-gap: var(--text-gap-space);
     overflow: visible;
 }
 .wrapper.home > .content.grid > .line:nth-child(1) {
@@ -36,43 +34,20 @@
     align-items: flex-start !important;
 }
 
-/* line content */
-.wrapper.home > .content.grid .line span {
-    font-family: "Poppins";
-    font-weight: 700;
-    line-height: 100%;
-    overflow: visible;
-}
-.wrapper.home > .content.grid .line span.highlight_one {
-    color: var(--highlight-one);
-    font-size: 180px;
-    text-shadow: var(--shadow-thickness) var(--shadow-thickness) 0px var(--shadow-color);
-    -webkit-text-stroke: var(--stroke-thickness) var(--stroke-color); 
-}
-.wrapper.home > .content.grid .line span.highlight_two {
-    color: var(--highlight-two);
-    font-size: 180px;
-    text-shadow: var(--shadow-thickness) var(--shadow-thickness) 0px var(--shadow-color);
-    -webkit-text-stroke: var(--stroke-thickness) var(--stroke-color); 
-}
-.wrapper.home > .content.grid .line span.basic {
-    color: var(--default-text-color);
-    font-size: 100px;
-}
-
 
 /* carreer layout */
 .wrapper.home > .content.grid > .career {
     grid-area: career;
     background-color: var(--highlight-three);
-    padding: 0px 50px 0px 50px;
+    padding: 50px;
     border-radius: 50px;
     border: solid var(--stroke-thickness) var(--stroke-color);
     box-shadow: var(--shadow-thickness) var(--shadow-thickness) 0px var(--shadow-color);
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
+
 
 /* carreer content */
 .wrapper.home > .content.grid > .career > .line {
@@ -101,114 +76,12 @@
 .wrapper.home > .content.grid > .career > .line > span {
     color: var(--default-text-color);
     font-family: "Poppins", Arial;
-    font-size: 50px;
+    font-size: var(--text-size-three);
     font-weight: 700;
 }
 .wrapper.home > .content.grid > .career > .line.splitter > span {
-    height: 50px;
+    height: var(--text-size-three);
     color: var(--splitter-color);
     word-break: break-all;
     overflow: hidden;
-}
-
-@media only screen and (max-width: 1500px) {
-    .wrapper.home > .content.grid {
-        column-gap: 65px;
-    }
-    .wrapper.home > .content.grid .line span.highlight_one {
-        font-size: 140px;
-    }
-    .wrapper.home > .content.grid .line span.highlight_two {
-        font-size: 140px;
-    }
-    .wrapper.home > .content.grid .line span.basic {
-        font-size: 80px;
-    }
-    .wrapper.home > .content.grid > .career > .line > span {
-        font-size: 35px;
-    }
-    .wrapper.home > .content.grid > .career > .line.splitter > span {
-        height: 35px;
-    }
-}
-@media only screen and (max-width: 1200px) {
-    .wrapper.home > .content.grid {
-        column-gap: 55px;
-    }
-    .wrapper.home > .content.grid .line span.highlight_one {
-        font-size: 100px;
-    }
-    .wrapper.home > .content.grid .line span.highlight_two {
-        font-size: 100px;
-    }
-    .wrapper.home > .content.grid .line span.basic {
-        font-size: 56px;
-    }
-    .wrapper.home > .content.grid > .career > .line > span {
-        font-size: 25px;
-    }
-    .wrapper.home > .content.grid > .career > .line.splitter > span {
-        height: 25px;
-    }
-}
-@media only screen and (max-width: 900px) {
-    .wrapper.home > .content.grid {
-        justify-items: center;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        grid-template-areas: 
-            "line1"
-            "line2"
-            "line3"
-            "line4"
-            "career";
-    }
-    .wrapper.home > .content.grid .line {
-        width: fit-content;
-        align-items: center;
-        column-gap: 10px;
-    }
-    .wrapper.home > .content.grid > .line:nth-child(1) {
-        flex-direction: column;
-    }
-    .wrapper.home > .content.grid > .line:nth-child(1) > .line {
-        align-items: baseline;
-    }
-    .wrapper.home > .content.grid > .career {
-        width: fit-content;
-        padding: 25px 35px 25px 35px;
-        margin-top: 40px;
-        row-gap: 25px;
-    }
-    .wrapper.home > .content.grid > .career > .line {
-        width: 350px;
-    }
-}
-@media only screen and (max-width: 500px) {
-    .wrapper.home > .content.grid .line {
-        column-gap: 6px;
-    }
-    .wrapper.home > .content.grid .line span.highlight_one {
-        font-size: 80px;
-    }
-    .wrapper.home > .content.grid .line span.highlight_two {
-        font-size: 80px;
-    }
-    .wrapper.home > .content.grid .line span.basic {
-        font-size: 45px;
-    }
-    .wrapper.home > .content.grid > .career > .line > span {
-        font-size: 25px;
-    }
-    .wrapper.home > .content.grid > .career > .line.splitter > span {
-        height: 25px;
-    }
-    .wrapper.home > .content.grid > .career {
-        padding: 20px 30px 20px 30px;
-        margin-top: 30px;
-        row-gap: 20px;
-    }
-    .wrapper.home > .content.grid > .career > .line {
-        width: 220px;
-    }
 }

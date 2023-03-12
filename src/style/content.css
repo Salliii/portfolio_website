@@ -1,15 +1,71 @@
-/* basic layout */
+/* basic site layout */
 section.wrapper {
     width: 1300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow-x: visible;
+    gap: 50px;
+    overflow: visible;
 }
-section.wrapper > .content.wrapper {
-    height: fit-content;
+section.wrapper > .content.grid {
     width: 100%;
+    display: grid;
+    overflow: visible;
+}
+
+
+/* site title */
+section.wrapper > .title {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 20px;
+    overflow: visible;
+}
+
+
+/* basic span styling */
+section.wrapper span {
+    font-family: "Poppins";
+    line-height: 100%;
+    overflow: visible;
+}
+section.wrapper span.highlight {
+    font-size: var(--text-size-one);
+    font-weight: 700;
+    text-shadow: var(--shadow-thickness) var(--shadow-thickness) 0px var(--shadow-color);
+    -webkit-text-stroke: var(--stroke-thickness) var(--stroke-color); 
+}
+section.wrapper span.highlight.one {
+    color: var(--highlight-one);
+}
+section.wrapper span.highlight.two {
+    color: var(--highlight-two);
+}
+section.wrapper span.basic {
+    color: var(--default-text-color);
+    font-size: var(--text-size-two);
+    font-weight: 700;
+}
+
+
+/* basic input & textarea styling */
+section.wrapper input,
+section.wrapper textarea {
+    color: var(--default-text-color);
+    font-family: "Poppins", Arial;
+    font-size: var(--text-size-four);
+    font-weight: 500;
+    line-height: 150%;
+    cursor: text;
+    resize: none;
+}
+section.wrapper input::placeholder,
+section.wrapper textarea::placeholder {
+    color: var(--placeholder-color);
+    font-weight: 700;
 }
 
 
@@ -20,31 +76,4 @@ section.wrapper.home {
 }
 section.wrapper.contact {
     height: 100vh;
-}
-
-
-
-@media only screen and (max-width: 1500px) {
-    section.wrapper {
-        width: 1020px;
-    }
-}
-@media only screen and (max-width: 1200px) {
-    section.wrapper {
-        width: 780px;
-    }
-}
-@media only screen and (max-width: 900px) {
-    section.wrapper {
-        width: 450px;
-    }
-}
-@media only screen and (max-width: 500px) {
-    section.wrapper {
-        width: 320px;
-    }
-    section.wrapper.home {
-        padding-top: 40px;
-        height: 100vh;
-    }
 }

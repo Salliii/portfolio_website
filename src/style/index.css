@@ -22,6 +22,15 @@
     --placeholder-color: rgba(0, 0, 0, 50%);
     --splitter-color: rgba(0, 0, 0, 10%);
 
+    /* text size */
+    --text-size-one: 180px;
+    --text-size-two: 100px;
+    --text-size-three: 40px;
+    --text-size-four: 25px;
+
+    /* text gap */
+    --text-gap-space: 25px;
+
     /* header */
     --header-background: rgba(0, 0, 0, 100%);
 }
@@ -53,30 +62,10 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 50px;
 }
 
 
 a, a * {
     cursor: pointer;
-}
-
-
-
-@media only screen and (max-width: 1500px) {
-    :root {
-        --shadow-thickness: 7px;
-        --stroke-thickness: 4px;
-    }
-}
-@media only screen and (max-width: 1200px) {
-    :root {
-        --shadow-thickness: 6px;
-        --stroke-thickness: 3px;
-    }
-}
-@media only screen and (max-width: 500px) {
-    :root {
-        --shadow-thickness: 5px;
-        --stroke-thickness: 2px;
-    }
 }

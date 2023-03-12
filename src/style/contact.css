@@ -1,12 +1,9 @@
 /* basic layout */
 .wrapper.contact > .content.grid {
-    width: 100%;
-    display: grid;
     row-gap: 25px;
     column-gap: 75px;
     grid-template-columns: auto 1fr;
     grid-template-rows: auto;
-    overflow: visible;
     grid-template-areas: 
     "cl-github   dmessage"
     "cl-linkedin dmessage"
@@ -75,24 +72,13 @@
 }
 .wrapper.contact > .content.grid > .wrapper.directmessage > .wrapper > .input {
     width: 100%;
-    color: var(--default-text-color);
-    font-family: "Poppins", Arial;
-    font-size: 25px;
-    font-weight: 500;
-    line-height: 150%;
     border: none;
-    cursor: text;
-    resize: none;
     flex-grow: 1;
     scrollbar-width: thin;
     scrollbar-color: var(--scrollbar-color) var(--highlight-two);
 }
 .wrapper.contact > .content.grid > .wrapper.directmessage > .wrapper > .input:focus {
     outline: none;
-}
-.wrapper.contact > .content.grid > .wrapper.directmessage > .wrapper > .input::placeholder {
-    color: var(--placeholder-color);
-    font-weight: 700;
 }
 
 .wrapper.contact > .content.grid > .wrapper.directmessage .send {
@@ -110,70 +96,4 @@
 }
 .wrapper.contact > .content.grid > .wrapper.directmessage .send:hover {
     background-color: var(--highlight-one-selected);
-}
-
-
-
-
-@media only screen and (max-width: 900px) {
-    .wrapper.contact > .content.grid {
-        row-gap: 50px;
-        column-gap: 25px;
-        grid-template-columns: auto;
-        grid-template-rows: auto 1fr;
-        grid-template-areas: 
-        "cl-github cl-linkedin cl-twitter cl-discord"
-        "dmessage dmessage dmessage dmessage";
-    }
-    .wrapper.contact > .content.grid > .contactlink {
-        height: 80px;
-        width: 80px;
-        padding: 20px;
-        border-radius: 20px;
-    }
-    .wrapper.contact > .content.grid > .wrapper.directmessage {
-        height: 500px;
-        gap: 20px;
-    }
-    .wrapper.contact > .content.grid > .wrapper.directmessage > .wrapper {
-        padding: 10px 20px 10px 20px;
-        gap: 5px;
-        border-radius: 20px;
-    }
-    .wrapper.contact > .content.grid > .wrapper.directmessage > .wrapper > .input {
-        font-size: 20px;
-        line-height: 130%;
-    }
-    .wrapper.contact > .content.grid > .wrapper.directmessage .send {
-        padding: 10px 30px 10px 30px;
-        border-radius: 20px;
-        font-size: 20px;
-        line-height: 130%;
-    }
-}
-@media only screen and (max-width: 500px) {
-    .wrapper.contact > .content.grid > .contactlink {
-        height: 60px;
-        width: 60px;
-        padding: 15px;
-        border-radius: 15px;
-    }
-    .wrapper.contact > .content.grid > .wrapper.directmessage {
-        height: 500px;
-        gap: 20px;
-    }
-    .wrapper.contact > .content.grid > .wrapper.directmessage > .wrapper {
-        padding: 10px 20px 10px 20px;
-        gap: 5px;
-        border-radius: 15px;
-    }
-    .wrapper.contact > .content.grid > .wrapper.directmessage > .wrapper > .input {
-        font-size: 18px;
-        line-height: 130%;
-    }
-    .wrapper.contact > .content.grid > .wrapper.directmessage .send {
-        border-radius: 15px;
-        font-size: 18px;
-        line-height: 130%;
-    }
 }
